@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+<!DOCTYPE html>
+<html>
+<body>
+{% block content %}
+<h1>Hello World!</h1>
+<p>Welcome to my first Django project!</p>
+<ul>
+  {% for x in mymembers %}
+    <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+  {% endfor %}
+</ul>
+ 
+{%endblock%}
+{{new}}
+</body>
+</html>
